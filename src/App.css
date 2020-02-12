@@ -20,11 +20,10 @@ html {
   width: 60%;
   height: auto;
   display: inline-block;
-  background-color: #0081d9;
+  background-color: #282124;
   color: white;
   border-radius: 16px;
   font-size: 42px;
   font-family: 'Lato', sans-serif;
   font-weight: 700;
-  box-shadow: 0 4px 8px 0 rgb(231, 1, 0), 0 6px 20px 0 rgb(232, 1, 0);
-}
+  box-shadow: 0 4px 8px 0 rgb(0, 125, 187), 0 6px 20px 0 rgb(2, 130, 191);}
