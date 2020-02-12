@@ -1,24 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import moment from 'moment';
+require('moment-countdown');
 
 function App() {
+  const countdown = () => moment("2020-03-18").countdown().toString();
+  const [timeUntilVegas, setTimeUntilVegas] = useState(countdown);
+
+  setInterval(() => {
+    setTimeUntilVegas(countdown)
+  }, 1000);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="countdown-container">
+      <div className="countdown">
+        {timeUntilVegas}
+      </div>
     </div>
   );
 }

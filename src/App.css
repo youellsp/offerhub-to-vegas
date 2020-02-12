@@ -1,38 +1,30 @@
-.App {
+html {
+  background: url(images/background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  opacity: 0.95;
+}
+
+.countdown-container{
+  position: absolute;
+  bottom: 4%;
+  width: 100%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.countdown {
+  vertical-align: middle;
+  padding: 2%;
+  width: 60%;
+  height: auto;
+  display: inline-block;
+  background-color: #0081d9;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  border-radius: 16px;
+  font-size: 42px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  box-shadow: 0 4px 8px 0 rgb(231, 1, 0), 0 6px 20px 0 rgb(232, 1, 0);
 }
