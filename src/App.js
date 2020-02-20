@@ -4,7 +4,7 @@ import moment from 'moment';
 require('moment-countdown');
 
 function App() {
-  const countdown = () => moment("2020-03-23").countdown().toString();
+  const countdown = () => moment("2020-03-23 13:00").countdown().toString();
   const [timeUntilVegas, setTimeUntilVegas] = useState(countdown);
 
   setInterval(() => {
