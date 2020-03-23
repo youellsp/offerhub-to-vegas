@@ -11,16 +11,25 @@ function App() {
     const [timeUntilVegas, setTimeUntilVegas] = useState(countdown);
     const [msTillVegas, setMsTillVegas] = useState(difference);
 
+    const postponed = true;
+    const postponedReason = 'The release has been postponed due to Coronavirus 🦠 \n Please stay tuned for updates...';
+
     useEffect(() => {
+        if (postponed) {
+            return;
+        }
         const countdownInterval = setInterval(() => {
             setTimeUntilVegas(countdown);
             setMsTillVegas(difference);
         }, 1000);
 
         return () => clearInterval(countdownInterval)
-    }, [msTillVegas]);
+    }, [postponed, msTillVegas]);
 
     useEffect(() => {
+        if (postponed) {
+           return;
+        }
         const defaults = {startVelocity: 60, spread: 360, ticks: 120, zIndex: 0};
         const randomInRange = (min, max) => Math.random() * (max - min) + min;
 
@@ -38,12 +47,12 @@ function App() {
         }, 250);
 
         return () => clearInterval(interval)
-    }, [msTillVegas]);
+    }, [postponed, msTillVegas]);
 
     return (
         <div className="countdown-container">
             <div className="countdown">
-                {msTillVegas > 0 && timeUntilVegas.toString() ? timeUntilVegas.toString() : 'Offer Hub is Live!'}
+                {postponed ? postponedReason : msTillVegas > 0 && timeUntilVegas.toString() ? timeUntilVegas.toString() : 'Offer Hub is Live!'}
             </div>
         </div>
     );
