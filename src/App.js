@@ -6,12 +6,12 @@ import confetti from 'canvas-confetti';
 require('moment-countdown');
 
 function App() {
-    const countdown = () => moment("2020-03-23 13:00").countdown();
-    const difference = () => moment("2020-03-23 13:00").diff(moment());
+    const countdown = () => moment("2020-04-29 13:00").countdown();
+    const difference = () => moment("2020-04-29 13:00").diff(moment());
     const [timeUntilVegas, setTimeUntilVegas] = useState(countdown);
     const [msTillVegas, setMsTillVegas] = useState(difference);
 
-    const postponed = true;
+    const postponed = false;
     const postponedReason = 'The release has been postponed due to Coronavirus 🦠 \n Please stay tuned for updates...';
 
     useEffect(() => {
