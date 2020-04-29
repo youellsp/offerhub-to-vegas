@@ -6,8 +6,8 @@ import confetti from 'canvas-confetti';
 require('moment-countdown');
 
 function App() {
-    const countdown = () => moment("2020-04-29 13:00").countdown();
-    const difference = () => moment("2020-04-29 13:00").diff(moment());
+    const countdown = () => moment("2020-04-29 09:00").countdown();
+    const difference = () => moment("2020-04-29 09:00").diff(moment());
     const [timeUntilVegas, setTimeUntilVegas] = useState(countdown);
     const [msTillVegas, setMsTillVegas] = useState(difference);
 
